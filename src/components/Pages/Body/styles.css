@@ -1,0 +1,34 @@
+.carousel {
+    display: flex;
+    margin: 25px 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel__left-arrow {
+    width: 30px;   
+    height: 30px;
+    border: 1px solid black;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+.carousel__left-arrow:hover {
+    transform: translate(-3px);
+    transition: all 250ms ease-in-out;
+}
+
+.carousel__right-arrow {
+    width: 30px;   
+    height: 30px;
+    border: 1px solid black;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+.carousel__right-arrow:hover {
+    transform: translate(3px);
+    transition: all 250ms ease-in-out;
+}

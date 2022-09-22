@@ -1,0 +1,19 @@
+.carousel__box {
+   overflow: hidden;
+   width: calc(100vh -300px);
+   background-color: aqua;
+}
+/* .carousel__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 996px;
+    height: 232px;
+} */
+
+.inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+    /* background-color: aqua; */
+}
+

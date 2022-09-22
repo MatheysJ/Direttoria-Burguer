@@ -1,0 +1,23 @@
+.switch-box{
+    width: 3rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.switch-box:hover {
+    cursor: pointer;
+}
+
+.switch-box:hover .navBar__icon{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all ease-in 250ms;
+}
+
+.navBar__icon {
+    filter: invert(1);
+    width: 2rem;
+    height: 1.5rem;
+    transition: all ease-in 250ms;
+}
