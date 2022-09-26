@@ -10,7 +10,6 @@ export const carouselSlice = createSlice({
     initialState,
     reducers: {
         increasePosition(state, action) {
-            console.log("increasePosition triggered")
             if (state.value < 4){
                 state.value = state.value + 1
                 state.position = `-${state.value}00%`
@@ -20,7 +19,6 @@ export const carouselSlice = createSlice({
             }
         },
         decreasePosition(state, action) {
-            console.log("decreasePosition triggered")
             if (state.value !== 0){
                 state.value = state.value - 1
                 state.position = `-${state.value}00%`
@@ -28,6 +26,11 @@ export const carouselSlice = createSlice({
                 state.value = 4
                 state.position = `-400%`
             }
+        },
+        changePosition(state, action) {
+            state.value = action.payload
+            state.position = `-${action.payload}00%`
+            
         }
         //remember to change 4 to max-value later
     }
@@ -36,5 +39,5 @@ export const carouselSlice = createSlice({
 export const selectPosition = (state) => state.carousel.position;
 export const selectNumberPosition = (state) => state.carousel.value;
 
-export const {increasePosition, decreasePosition} = carouselSlice.actions
+export const {increasePosition, decreasePosition, changePosition} = carouselSlice.actions
 export default carouselSlice.reducer

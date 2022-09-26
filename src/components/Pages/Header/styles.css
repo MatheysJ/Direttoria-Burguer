@@ -13,7 +13,7 @@
 }
 
 .navBar__item{
-    width: 5rem;
+    /* width: fit-content; */
     height: 4rem;
     display: flex;
     justify-content: center;
@@ -22,6 +22,7 @@
     font-weight: 700;
     transition: all ease-in 250ms;
     box-shadow: inset 0 0 0 0.09px transparent; /* evita que a box-shadow fique flicando */
+    padding: 0 0.5rem;
 }
 
 .navBar__item p {
@@ -29,7 +30,7 @@
 }
 
 .navBar__item:hover {
-    box-shadow: inset 5rem 0 0 var(--highlight-color);
+    box-shadow: inset 6rem 0 0 var(--highlight-color);
     transition: all ease-in 250ms;
     cursor: pointer;
 }
