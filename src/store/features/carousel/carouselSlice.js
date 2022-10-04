@@ -1,8 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
+import slides from '../../../common/Slides/data.json'
 
 const initialState = {
     position: '0%',
     value: 0,
+    slides: slides,
+    numOfSlides: (slides.length - 1)//O index do último slide
 }
 
 export const carouselSlice = createSlice({
@@ -10,7 +13,7 @@ export const carouselSlice = createSlice({
     initialState,
     reducers: {
         increasePosition(state, action) {
-            if (state.value < 4){
+            if (state.value < state.numOfSlides){
                 state.value = state.value + 1
                 state.position = `-${state.value}00%`
             } else {
@@ -23,21 +26,25 @@ export const carouselSlice = createSlice({
                 state.value = state.value - 1
                 state.position = `-${state.value}00%`
             } else {
-                state.value = 4
-                state.position = `-400%`
+                state.value = state.numOfSlides
+                state.position = `-${state.numOfSlides}00%`
             }
         },
         changePosition(state, action) {
             state.value = action.payload
             state.position = `-${action.payload}00%`
             
+        },
+        checkSlides(state) {
+            state.slides = slides
         }
-        //remember to change 4 to max-value later
     }
 })
 
 export const selectPosition = (state) => state.carousel.position;
 export const selectNumberPosition = (state) => state.carousel.value;
+export const selectSlides = (state) => state.carousel.slides;
+export const selectNumOfSlides = (state) => (state.carousel.numOfSlides + 1);
 
 export const {increasePosition, decreasePosition, changePosition} = carouselSlice.actions
 export default carouselSlice.reducer

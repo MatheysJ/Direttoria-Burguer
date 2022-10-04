@@ -1,0 +1,36 @@
+.carousel__arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.2);
+    user-select: none;
+}
+
+.carousel__left-arrow {
+    width: 30px;   
+    height: 30px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel__left-arrow:hover {
+    transform: translate(-3px);
+    transition: all 250ms ease-in-out;
+}
+
+.carousel__right-arrow {
+    width: 30px;   
+    height: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+.carousel__right-arrow:hover {
+    transform: translate(3px);
+    transition: all 250ms ease-in-out;
+}

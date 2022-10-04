@@ -11,13 +11,13 @@ const SwitchIcon = () => {
     const theme = useSelector(selectTheme)
 
     const switchTheme = () => {
-        theme == 'light-theme' ? dispatch(themeSwitch('dark-theme')) : dispatch(themeSwitch('light-theme'))
+        theme === 'light-theme' ? dispatch(themeSwitch('dark-theme')) : dispatch(themeSwitch('light-theme'))
     }
 
     return (
         <div className='switch-box' onClick={() => {switchTheme()}}>
             {
-                theme == 'light-theme' 
+                theme === 'light-theme' 
                 ?
                 <BsLightbulb className='navBar__icon' />
                 :
